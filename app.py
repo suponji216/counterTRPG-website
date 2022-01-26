@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template('mainpage.html', title='test', main='aa', footer='aaa')
+    return render_template('mainpage.html')
 
 
 @app.route("/<name>")

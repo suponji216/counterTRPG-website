@@ -1,3 +1,98 @@
-p {
-    color: cadetblue;
+main {
+  min-height: 1080px;
+  min-width: 1920px;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+@keyframes fadeInAnimeBack {
+    from {
+      opacity: 0;
+      background-position-y: -10vh;
+    }
+  
+    to {
+      opacity: 1;
+      background-position-y: -30vh;
+    }
+  }
+
+#back {
+  animation-name:fadeInAnimeBack;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+
+  background-image: url("/static/img/back.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  background-position-y: -30vh;
+
+  background-color: black;
+  box-shadow: inset 0 0 50px 50px black;
+
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes animeBack_Filter {
+  from {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+#black_filter {
+  animation-name: animeBack_Filter;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes fadeInAnimeMenu {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#menu {
+  animation-name: fadeInAnimeMenu;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+  display: inline-block;
+  position: absolute;
+  top: 30vh;
+  right: 1vw;
+}
+
+.menuitems {
+  color: aliceblue;
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+  font-size: max(5vw, 70px);
+  
+}
+
+.menuitems a {
+  padding: 1vw;
+}
+
+.menuitems a span{
+  /*border: 2px solid rgba(255, 255, 255, 0.6);*/
+  transition: all .3s;
 }

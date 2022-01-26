@@ -2,9 +2,24 @@
 
 {% block head %}
     {{ super() }}
-    <link href="/static/css/mainpage.css" rel="stylesheet" type="text/css" media="all">
+    <title>counter trpg</title>
+    <link href="/static/css/destyle.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/mainpage.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block main %}
-    <p>{{main}}</p>
+    <main>
+        <div id=back>
+            <div id=black_filter>
+                <div id=menu>
+                    <div class="menuitems">
+                        <a href=""><span>CHARACTER SHEET</span></a>
+                    </div>
+                    <div class="menuitems">
+                        <a href="https://booth.pm/ja/items/2409663"><span>BOOTH</span></a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </main>
 {% endblock %}
